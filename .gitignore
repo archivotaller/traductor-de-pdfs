@@ -35,6 +35,7 @@ htmlcov/
 bin/
 models/
 *.gguf
+tests/bench/out/
 *.ptproj/
 cache/
 
