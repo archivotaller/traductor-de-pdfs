@@ -1,0 +1,38 @@
+# Configuración principal de ptr (Traductor local de PDF académicos EN -> ES)
+[engine.llm]
+server_binary = "bin/llama-server.exe"
+model_path = "models/qwen2.5-7b-instruct-q4_k_m.gguf"
+context_size = 8192
+n_gpu_layers = 99
+parallel_slots = 2
+device = "vulkan"
+host = "127.0.0.1"
+port = 0  # 0 = puerto aleatorio
+
+[engine.fast]
+model_path = "models/ct2/nllb-200-distilled-600M-int8"
+compute_type = "int8"
+inter_threads = 2
+intra_threads = 4
+
+[render.mode_a]
+min_font_scale = 0.80
+min_font_size_pt = 6.5
+min_line_height_factor = 1.0
+allow_box_expansion = true
+max_expansion_pt = 15.0
+overflow_strategy = "annex"  # "annex" o "shrink"
+
+[render.mode_c]
+page_size = "A4"
+margin_mm = 20.0
+base_font = "Tinos"
+base_font_size_pt = 10.5
+line_height = 1.35
+heading_font = "Arimo"
+include_bibliography = true
+
+[paths]
+glossaries_dir = "resources/glossaries"
+fonts_dir = "resources/fonts"
+prompts_dir = "resources/prompts"
