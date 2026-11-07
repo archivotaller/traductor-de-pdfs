@@ -48,3 +48,6 @@ config.local.toml
 Thumbs.db
 .vscode/
 .idea/
+
+# Salidas de pruebas manuales
+/test_*.pdf

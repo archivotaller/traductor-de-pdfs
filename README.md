@@ -39,3 +39,7 @@ pdf-translator/
 ├── models/                 # Modelos GGUF / CT2 (ignorado en git)
 └── tests/                  # Tests unitarios, contrato y corpus
 ```
+
+## Licencia
+
+Apache-2.0. Ver [LICENSE](LICENSE).
